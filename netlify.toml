@@ -1,0 +1,14 @@
+[build]
+  base = "apps/storefront"
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY = "not-used"
+  NEXT_PUBLIC_MEDUSA_BACKEND_URL = "http://localhost:9000"
+  NEXT_PUBLIC_DEFAULT_REGION = "sn"
+  NEXT_PUBLIC_BASE_URL = "https://nasbeauty.netlify.app"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
